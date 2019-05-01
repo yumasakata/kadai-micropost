@@ -18,8 +18,8 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     flash[:success] = 'ログアウトしました。'
     redirect_to root_url
-    
-    private
+  end
+  private
 
   def login(email, password)
     @user = User.find_by(email: email)

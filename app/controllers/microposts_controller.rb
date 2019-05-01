@@ -32,4 +32,9 @@ class MicropostsController < ApplicationController
       redirect_to root_url
     end
   end
+  
+  def like_users
+    @micropost = Micropost.find(params[:id])
+    @like_users = @micropost.like_users.page(params[:page])
+  end  
 end

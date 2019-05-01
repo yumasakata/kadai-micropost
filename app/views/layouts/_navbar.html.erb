@@ -20,14 +20,12 @@
                 <li><%= link_to 'My profile', user_path(current_user) %></li>
                 <li role="separator" class="divider"></li>
                 <li><%= link_to 'Logout', logout_path, method: :delete %></li>
-                <li>Logout</li>
               </ul>
             </li>
           <% else %>
            <li><%= link_to 'Signup', signup_path %></li>
             <li><%= link_to 'Login', login_path %></li>
-          <li><a href="#">Signup</a></li>
-          <li><a href="#">Login</a></li>
+          <% end %>
         </ul>
       </div>
     </div>
